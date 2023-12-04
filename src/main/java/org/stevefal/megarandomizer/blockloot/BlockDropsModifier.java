@@ -55,7 +55,6 @@ public class BlockDropsModifier extends LootModifier {
         return generatedLoot;
     }
 
-
     public static class Serializer extends GlobalLootModifierSerializer<BlockDropsModifier> {
 
         @Override
