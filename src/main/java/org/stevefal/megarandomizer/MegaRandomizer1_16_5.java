@@ -19,6 +19,7 @@ import org.apache.logging.log4j.Logger;
 import org.stevefal.megarandomizer.blockloot.MegaLootModifiers;
 import org.stevefal.megarandomizer.blockloot.condition.MegaLootItemConditions;
 import org.stevefal.megarandomizer.gamerules.MegaGameRules;
+import org.stevefal.megarandomizer.networking.MegaMessages;
 
 import java.util.stream.Collectors;
 
@@ -49,9 +50,9 @@ public class MegaRandomizer1_16_5 {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
+        // Register network messages
+        MegaMessages.register();
 
         // Register MegaGameRules
         MegaGameRules.register();
