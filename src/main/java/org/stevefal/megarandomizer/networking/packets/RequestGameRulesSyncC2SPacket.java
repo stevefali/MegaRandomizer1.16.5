@@ -2,6 +2,7 @@ package org.stevefal.megarandomizer.networking.packets;
 
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.network.NetworkEvent;
 import org.stevefal.megarandomizer.gamerules.MegaGameRules;
@@ -33,6 +34,7 @@ public class RequestGameRulesSyncC2SPacket {
             MegaMessages.sendToPlayer(new GameRulesSyncS2CPacket(level.getGameRules().getBoolean(MegaGameRules.RULE_DOBLOCKRANDOMDROPS),
                     level.getGameRules().getBoolean(MegaGameRules.RULE_DOENTITYRANDOMDROPS),
                     level.getGameRules().getBoolean(MegaGameRules.RULE_DOPLAYERRANDOMDROPS)), player);
+
 
         });
         return true;

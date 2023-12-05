@@ -11,6 +11,8 @@ import net.minecraft.util.Util;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import org.stevefal.megarandomizer.networking.MegaMessages;
+import org.stevefal.megarandomizer.networking.packets.RequestGameRulesSyncC2SPacket;
 
 @OnlyIn(Dist.CLIENT)
 public class ModPauseScreen  extends Screen{
@@ -71,6 +73,7 @@ public class ModPauseScreen  extends Screen{
 
         // MegaRandomizer Options Button
         this.addButton(new Button(this.width / 2 - 102, this.height / 4 + 120 + -16, 204, 20, new TranslationTextComponent("menu.megarandomoptions"), (megBut) -> {
+            MegaMessages.sendToServer(new RequestGameRulesSyncC2SPacket());
             this.minecraft.setScreen(new MegaRandomOptionsScreen(this, this.minecraft.level, true));
         }));
 
