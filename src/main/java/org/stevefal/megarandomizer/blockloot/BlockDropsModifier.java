@@ -39,9 +39,6 @@ public class BlockDropsModifier extends LootModifier {
     @Override
     protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
 
-        // TODO: Finish this
-        System.out.println("DO APPLY REACHED!!!!!!!!!!");
-
         if (context.getLevel().getGameRules().getBoolean(MegaGameRules.RULE_DOBLOCKRANDOMDROPS)) {
             // Replace the loot items.
             ArrayList<ItemStack> randomizedLoot = new ArrayList<>();
@@ -50,6 +47,8 @@ public class BlockDropsModifier extends LootModifier {
             });
             generatedLoot.clear();
             generatedLoot.addAll(randomizedLoot);
+
+//            context.getLevel().players().get(0).displayClientMessage(ITextComponent.nullToEmpty("Test!"), true);
         }
 
         return generatedLoot;
