@@ -34,7 +34,7 @@ public class ModPauseScreen  extends Screen{
         int i = -16;
         int j = 98;
         this.addButton(new Button(this.width / 2 - 102, this.height / 4 + 24 + -16, 204, 20, new TranslationTextComponent("menu.returnToGame"), (p_213070_1_) -> {
-            this.minecraft.setScreen((Screen)null);
+            this.minecraft.setScreen(null);
             this.minecraft.mouseHandler.grabMouse();
         }));
         this.addButton(new Button(this.width / 2 - 102, this.height / 4 + 48 + -16, 98, 20, new TranslationTextComponent("gui.advancements"), (p_213065_1_) -> {

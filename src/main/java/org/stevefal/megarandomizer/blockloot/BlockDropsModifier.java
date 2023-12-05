@@ -1,33 +1,18 @@
 package org.stevefal.megarandomizer.blockloot;
 
-import com.google.common.base.Suppliers;
 import com.google.gson.JsonObject;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.loot.LootContext;
-import net.minecraft.loot.LootParameters;
 import net.minecraft.loot.conditions.ILootCondition;
-import net.minecraft.loot.conditions.LootConditionManager;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
-import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.common.loot.LootModifier;
-import org.stevefal.megarandomizer.blockloot.condition.MegaLootItemConditions;
 import org.stevefal.megarandomizer.gamerules.MegaGameRules;
 import org.stevefal.megarandomizer.megadrops.RandomDrops;
 
 import javax.annotation.Nonnull;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Supplier;
 
 public class BlockDropsModifier extends LootModifier {
 
@@ -47,8 +32,6 @@ public class BlockDropsModifier extends LootModifier {
             });
             generatedLoot.clear();
             generatedLoot.addAll(randomizedLoot);
-
-//            context.getLevel().players().get(0).displayClientMessage(ITextComponent.nullToEmpty("Test!"), true);
         }
 
         return generatedLoot;

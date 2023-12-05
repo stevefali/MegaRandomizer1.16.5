@@ -1,25 +1,19 @@
 package org.stevefal.megarandomizer.event;
 
 
-import net.minecraft.client.gui.screen.GPUWarningScreen;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.loot.conditions.LootConditionManager;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.Logging;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.server.FMLServerStartedEvent;
-import org.apache.logging.log4j.LogManager;
 import org.stevefal.megarandomizer.MegaRandomizer1_16_5;
 import org.stevefal.megarandomizer.gamerules.MegaGameRules;
 import org.stevefal.megarandomizer.megadrops.RandomDrops;
 
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 @Mod.EventBusSubscriber(modid = MegaRandomizer1_16_5.MODID)
 public class ModEvents {

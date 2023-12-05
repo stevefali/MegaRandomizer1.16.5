@@ -1,18 +1,11 @@
 package org.stevefal.megarandomizer.blockloot;
 
-import com.google.gson.JsonObject;
-import net.minecraft.loot.conditions.ILootCondition;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
-import net.minecraftforge.common.loot.IGlobalLootModifier;
-import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.stevefal.megarandomizer.MegaRandomizer1_16_5;
-import org.stevefal.megarandomizer.blockloot.condition.BlockDropSourceCondition;
-import org.stevefal.megarandomizer.blockloot.condition.MegaLootItemConditions;
 
 public class MegaLootModifiers {
 

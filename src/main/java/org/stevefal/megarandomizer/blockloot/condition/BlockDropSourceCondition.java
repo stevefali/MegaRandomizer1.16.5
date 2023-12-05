@@ -32,11 +32,7 @@ public class BlockDropSourceCondition implements ILootCondition {
     public boolean test(LootContext lootContext) {
         BlockState blockState = lootContext.getParamOrNull(LootParameters.BLOCK_STATE);
         // Check if the drops are from a block
-        if (blockState != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return blockState != null;
     }
 
     public static class Serializer implements net.minecraft.loot.ILootSerializer<BlockDropSourceCondition> {
