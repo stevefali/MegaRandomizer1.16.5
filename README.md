@@ -17,3 +17,6 @@ Minecraft and Forge's code worked in 1.16.5 and making changes accordingly.
     - Getting a copy of the list of all registered items at runtime. This allows the mod to include randomization of drop items that are added by other Forge mods that may be running.
     - Removing from that list the items that I don't want to be obtainable as drops (spawn eggs, debug stick, command blocks, etc.)
     - Shuffling the list using the game seed to produce a randomly-ordered list that is unique to that world.
+ 
+## Help Support Mega Randomizer
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H5103UQ6)
