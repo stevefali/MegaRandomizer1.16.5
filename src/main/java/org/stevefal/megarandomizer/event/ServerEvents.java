@@ -16,7 +16,7 @@ import org.stevefal.megarandomizer.megadrops.RandomDrops;
 import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(modid = MegaRandomizer1_16_5.MODID)
-public class ModEvents {
+public class ServerEvents {
 
 
     // Setup and Shuffle the drops list when the server is ready
