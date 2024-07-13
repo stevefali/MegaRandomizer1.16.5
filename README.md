@@ -3,7 +3,12 @@ This is the 1.16.5 version of my [Mega Randomizer](https://github.com/stevefali/
 I had a lot of fun building this project, and I must admit, it was more work than I expected.
 At a high level, the functionality of the mod is achieved in a similar way to the original version of Mega Randomizer. The bulk of the work on this project was learning how
 Minecraft and Forge's code worked in 1.16.5 and making changes accordingly.
-### Here is a high-level overview of how the code works
+
+### The repositories for the other versions of Mega Randomizer can be found here:
+- [Main version](https://github.com/stevefali/MegaRandomizer)
+- [1.7.10](https://github.com/stevefali/MegaRandomizer1.7.10)
+
+## Here is a high-level overview of how the code works
 - There are 3 new custom game rules, doBlockRandomDrops, doEntityRandomDrops, and doPlayerRandomDrops. These can be turned on or off using commands, or using the custom GUI menu.
 - There is a custom menu screen with buttons for turning the drop randomization types on or off.
     - The event for the in-game menu (the pause screen) is intercepted so that I can instead show my customized version of the pause screen that includes a button for the Mega Randomizer menu screen.
