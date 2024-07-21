@@ -6,7 +6,9 @@ Minecraft and Forge's code worked in 1.16.5 and making changes accordingly.
 
 ### The repositories for the other versions of Mega Randomizer can be found here:
 - [Main version](https://github.com/stevefali/MegaRandomizer)
+- [1.12.10](https://github.com/stevefali/MegaRandomizer1.12.10)
 - [1.7.10](https://github.com/stevefali/MegaRandomizer1.7.10)
+
 
 ## Here is a high-level overview of how the code works
 - There are 3 new custom game rules, doBlockRandomDrops, doEntityRandomDrops, and doPlayerRandomDrops. These can be turned on or off using commands, or using the custom GUI menu.
