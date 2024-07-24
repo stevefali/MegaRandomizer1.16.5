@@ -20,7 +20,7 @@ public class ClientEvents {
         @SubscribeEvent
         public static void onPauseMenuTriggered(GuiScreenEvent.InitGuiEvent event) {
             boolean isSinglePlayer = Minecraft.getInstance().isLocalServer();
-            if (event.getGui() instanceof IngameMenuScreen) {
+            if (event.getGui() instanceof IngameMenuScreen && !(event.getGui() instanceof ModPauseScreen)) {
                 Minecraft.getInstance().setScreen(new ModPauseScreen(true));
             }
         }

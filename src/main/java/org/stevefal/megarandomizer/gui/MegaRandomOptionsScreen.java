@@ -32,7 +32,6 @@ public class MegaRandomOptionsScreen extends Screen {
     private static final TranslationTextComponent DONE = new TranslationTextComponent("menu.megarandomoptions.done");
 
 
-
     protected MegaRandomOptionsScreen(Screen lastScreen, World world, boolean showMegaRandomOptions) {
         super(new TranslationTextComponent("menu.megarandomoptions"));
 
@@ -51,19 +50,22 @@ public class MegaRandomOptionsScreen extends Screen {
     private void setupMegaRandomizerMenu() {
 
         this.blocksRandomButton = this.addButton(new Button(this.width / 2 - 102, this.height / 4 + 24 + -16, 204, 20, getBlocksComponent(), (button) -> {
-            MegaMessages.sendToServer(new SetGameRulesC2SPacket(!WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOBLOCKRANDOMDROPS),
-                   WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOENTITYRANDOMDROPS),
+            MegaMessages.sendToServer(new SetGameRulesC2SPacket(
+                    !WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOBLOCKRANDOMDROPS),
+                    WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOENTITYRANDOMDROPS),
                     WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOPLAYERRANDOMDROPS)));
         }));
 
         this.entitiesRandomButton = this.addButton(new Button(this.width / 2 - 102, this.height / 4 + 48 + -16, 204, 20, getEntityComponent(), (button) -> {
-            MegaMessages.sendToServer(new SetGameRulesC2SPacket(WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOBLOCKRANDOMDROPS),
+            MegaMessages.sendToServer(new SetGameRulesC2SPacket(
+                    WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOBLOCKRANDOMDROPS),
                     !WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOENTITYRANDOMDROPS),
                     WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOPLAYERRANDOMDROPS)));
         }));
 
         this.playerRandomButton = this.addButton(new Button(this.width / 2 - 102, this.height / 4 + 72 + -16, 204, 20, getPlayerComponent(), (button) -> {
-            MegaMessages.sendToServer(new SetGameRulesC2SPacket(WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOBLOCKRANDOMDROPS),
+            MegaMessages.sendToServer(new SetGameRulesC2SPacket(
+                    WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOBLOCKRANDOMDROPS),
                     WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOENTITYRANDOMDROPS),
                     !WORLD.getGameRules().getBoolean(MegaGameRules.RULE_DOPLAYERRANDOMDROPS)));
         }));
@@ -73,7 +75,6 @@ public class MegaRandomOptionsScreen extends Screen {
             this.minecraft.setScreen(this.LAST_SCREEN);
         }));
     }
-
 
 
     private TranslationTextComponent getBlocksComponent() {
