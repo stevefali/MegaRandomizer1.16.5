@@ -26,4 +26,6 @@ Minecraft and Forge's code worked in 1.16.5 and making changes accordingly.
     - Shuffling the list using the game seed to produce a randomly-ordered list that is unique to that world.
  
 ## Help Support Mega Randomizer
+If you like Mega Randomizer, consider buying me a cup of coffee! Your generosity helps keep this project going.
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H5103UQ6)
